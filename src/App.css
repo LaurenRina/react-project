@@ -108,6 +108,15 @@ footer {
   position: relative;
   top: -20px;
 }
+.unit-link {
+  text-decoration: none;
+  color: #000000;
+  cursor: default;
+}
+.unit-link:hover {
+  color: #000000;
+  text-decoration: underline;
+}
 .city-link {
   text-decoration: none;
   color: #000000;
