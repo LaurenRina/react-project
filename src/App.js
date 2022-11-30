@@ -7,7 +7,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <div className="Content">
-          <Search />
+          <Search cityName="Rome" />
         </div>
         <footer>
           <i class="fa-brands fa-github content-icon"></i>LaurenRina{" "}
