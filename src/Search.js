@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Cities from "./Cities";
 import Information from "./Information";
 
 import axios from "axios";
@@ -7,6 +6,7 @@ import axios from "axios";
 export default function Search(props) {
   const [weather, setWeather] = useState({ loaded: false });
   const [city, setCity] = useState(props.cityName);
+  let cityNames = ["London", "Paris", "Rome", "Berlin", "Kyiv"];
 
   function showWeather(response) {
     setWeather({
@@ -28,6 +28,11 @@ export default function Search(props) {
   }
   function updateCity(event) {
     setCity(event.target.value);
+  }
+  function showCity(event) {
+    event.preventDefault();
+    setCity(event.target.value);
+    searchCity();
   }
   function searchCity() {
     let apiKey = "3e5761385c02293899defe61082c2901";
@@ -54,11 +59,27 @@ export default function Search(props) {
     </form>
   );
 
+  let cities = (
+    <div className="cities">
+      <div className="row">
+        {cityNames.map(function (city, index) {
+          return (
+            <div className="col">
+              <a href="/" key={index} className="city-link" onClick={showCity}>
+                {city}
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+
   if (weather.ready) {
     return (
-      <div>
+      <div className="Content">
         {form}
-        <Cities />
+        {cities}
         <hr />
         <Information weather={weather} />
       </div>

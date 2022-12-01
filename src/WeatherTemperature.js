@@ -18,9 +18,7 @@ export default function WeatherTemperature(props) {
   if (unit === "metric") {
     return (
       <div>
-        <span className="temperature-day" id="current-temperature">
-          {props.temperature}
-        </span>
+        <span className="temperature-day">{props.temperature}</span>
         <span className="temperature-unit">
           °C |{" "}
           <a href="/" onClick={convertF} className="unit-link">
@@ -32,9 +30,7 @@ export default function WeatherTemperature(props) {
   } else {
     return (
       <div>
-        <span className="temperature-day" id="current-temperature">
-          {Math.round(imperial())}
-        </span>
+        <span className="temperature-day">{Math.round(imperial())}</span>
         <span className="temperature-unit">
           <a href="/" onClick={convertC} className="unit-link">
             °C

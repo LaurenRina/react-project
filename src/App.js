@@ -6,15 +6,13 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="Content">
-          <Search cityName="Kyiv" />
-        </div>
+        <Search cityName="Kyiv" />
         <footer>
-          <i class="fa-brands fa-github content-icon"></i>LaurenRina{" "}
+          <i className="fa-brands fa-github content-icon"></i>LaurenRina{" "}
           <a
             href="https://github.com/LaurenRina/weather-react"
             target="blank"
-            class="contact-link"
+            className="contact-link"
             title="GitHub"
           >
             React Project

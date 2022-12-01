@@ -8,10 +8,10 @@ export default function Information(props) {
     <div className="information">
       <div className="row">
         <div className="col-7">
-          <h1 id="city">{props.weather.city}</h1>
+          <h1>{props.weather.city}</h1>
         </div>
         <div className="col-5">
-          <h2 id="date">
+          <h2>
             <FormattedDate date={props.weather.date} />
           </h2>
         </div>
@@ -30,9 +30,9 @@ export default function Information(props) {
                 <div className="temperature-information">
                   <strong>
                     {" "}
-                    <span id="max">{props.weather.max}</span>° /
+                    <span>{props.weather.max}</span>° /
                   </strong>{" "}
-                  <span id="min">{props.weather.min}</span>°
+                  <span>{props.weather.min}</span>°
                 </div>
               </div>
             </div>
@@ -40,13 +40,13 @@ export default function Information(props) {
           <div className="col-5">
             <ul>
               <li>
-                <span id="description">{props.weather.description}</span>
+                <span>{props.weather.description}</span>
               </li>
               <li>
-                Humidity: <span id="humidity">{props.weather.humidity}</span>%
+                Humidity: <span>{props.weather.humidity}</span>%
               </li>
               <li>
-                Wind speed: <span id="wind">{props.weather.wind}</span> km/h
+                Wind speed: <span>{props.weather.wind}</span> km/h
               </li>
             </ul>
           </div>

@@ -72,13 +72,19 @@ footer {
 }
 .cities {
   display: block;
-  color: #5a6275;
+
+  cursor: default;
   text-align: center;
   font-size: 18px;
   padding-top: 15px;
 }
 .city-link {
+  color: #000000;
+  text-decoration: none;
   margin-bottom: 0px;
+}
+.city-link:hover {
+  color: #000000;
 }
 .information {
   padding: 10px;
@@ -116,11 +122,6 @@ footer {
 .unit-link:hover {
   color: #000000;
   text-decoration: underline;
-}
-.city-link {
-  text-decoration: none;
-  color: #000000;
-  cursor: default;
 }
 .link-git {
   padding-top: 15px;
