@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import Information from "./Information";
+import "./Search.css";
 
 import axios from "axios";
 
 export default function Search(props) {
   const [weather, setWeather] = useState({ loaded: false });
   const [city, setCity] = useState(props.cityName);
-  let cityNames = ["London", "Paris", "Rome", "Berlin", "Kyiv"];
+  let cityNames = [
+    { id: 1, name: "London" },
+    { id: 2, name: "Paris" },
+    { id: 3, name: "Rome" },
+    { id: 4, name: "Berlin" },
+    { id: 5, name: "Kyiv" },
+  ];
 
   function showWeather(response) {
     setWeather({
@@ -31,7 +38,7 @@ export default function Search(props) {
   }
   function showCity(event) {
     event.preventDefault();
-    setCity(event.target.value);
+    setCity("London");
     searchCity();
   }
   function searchCity() {
@@ -40,7 +47,7 @@ export default function Search(props) {
     axios.get(apiUrl).then(showWeather);
   }
   let form = (
-    <form onSubmit={submitCity} className="search" id="search-form">
+    <form onSubmit={submitCity} className="search">
       <div className="row">
         <div className="col-9">
           <input
@@ -49,7 +56,6 @@ export default function Search(props) {
             autoComplete="off"
             onChange={updateCity}
             className="enter-city"
-            id="search-input"
           />
         </div>
         <div className="col-3">
@@ -62,11 +68,16 @@ export default function Search(props) {
   let cities = (
     <div className="cities">
       <div className="row">
-        {cityNames.map(function (city, index) {
+        {cityNames.map(function (city) {
           return (
             <div className="col">
-              <a href="/" key={index} className="city-link" onClick={showCity}>
-                {city}
+              <a
+                href="/"
+                key={city.id}
+                className="city-link"
+                onClick={showCity}
+              >
+                {city.name}
               </a>
             </div>
           );

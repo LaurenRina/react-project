@@ -8,7 +8,7 @@ export default function App() {
       <div className="container">
         <Search cityName="Kyiv" />
         <footer>
-          <i className="fa-brands fa-github content-icon"></i>LaurenRina{" "}
+          <i className="fa-brands fa-github contact-icon"></i>LaurenRina{" "}
           <a
             href="https://github.com/LaurenRina/weather-react"
             target="blank"
