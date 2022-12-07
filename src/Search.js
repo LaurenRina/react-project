@@ -94,6 +94,7 @@ export default function Search(props) {
         <hr />
         <Information weather={weather} />
         <hr />
+        <Forecast city={weather.city} />
       </div>
     );
   } else {

@@ -20,10 +20,7 @@ li:first-letter {
   text-transform: capitalize;
 }
 .information {
-  padding: 10px;
-}
-.current-weather {
-  padding: 5px 0px 5px;
+  padding: 10px 10px 0px;
 }
 .current-weather-icon {
   padding: 25px 25px 0px;
@@ -36,8 +33,8 @@ li:first-letter {
 }
 .current-day {
   font-family: "Reem Kufi", sans-serif;
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 45px;
+  line-height: 45px;
   padding-right: 5px;
 }
 .current-day-unit {
@@ -46,6 +43,7 @@ li:first-letter {
   top: -20px;
 }
 .current-day-information {
+  color: #979eac;
   text-align: left;
   line-height: 24px;
 }
@@ -56,6 +54,7 @@ li:first-letter {
 .current-day-temperature {
   font-family: "Reem Kufi", sans-serif;
   font-size: 24px;
+  line-height: 24px;
   padding-right: 5px;
 }
 .current-day-information-unit {

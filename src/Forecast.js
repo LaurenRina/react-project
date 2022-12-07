@@ -22,11 +22,13 @@ export default function Forecast(props) {
       <div className="forecast">
         <div className="row">
           {forecast.map(function (dailyForecast, index) {
-            return (
-              <div className="col" key={index}>
-                <ForecastDay data={dailyForecast} />
-              </div>
-            );
+            if (index < 6) {
+              return (
+                <div className="col" key={index}>
+                  <ForecastDay data={dailyForecast} />
+                </div>
+              );
+            }
           })}
         </div>
       </div>
