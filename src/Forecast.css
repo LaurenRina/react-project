@@ -1,0 +1,16 @@
+.forecast-day {
+  color: #5a6275;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0px 15px;
+}
+.forecast-icon {
+  width: 60px;
+  position: relative;
+  top: -7px;
+  right: 10px;
+}
+.forecast-temperature {
+  text-align: left;
+}

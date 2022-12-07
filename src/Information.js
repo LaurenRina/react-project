@@ -1,7 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
-import WeatherTemperature from "./WeatherTemperature";
 import "./Information.css";
 
 export default function Information(props) {
@@ -26,14 +25,17 @@ export default function Information(props) {
               </div>
               <div className="col-7">
                 <div className="current-weather-temperature">
-                  <WeatherTemperature temperature={props.weather.temperature} />
+                  <span className="current-day">
+                    {props.weather.temperature}
+                  </span>
+                  <span className="current-day-unit">° C</span>
                 </div>
-                <div className="temperature-information">
-                  <strong>
-                    {" "}
-                    <span>{props.weather.max}</span>° /
-                  </strong>{" "}
-                  <span>{props.weather.min}</span>°
+                <div className="current-day-information">
+                  <span className="current-day-text">Feels like </span>
+                  <span className="current-day-temperature">
+                    {props.weather.feels}
+                  </span>
+                  <span className="current-day-information-unit">° C</span>
                 </div>
               </div>
             </div>

@@ -13,7 +13,7 @@ h2 {
 ul {
   list-style: none;
   color: #979eac;
-  font-size: 16px;
+  font-size: 17px;
   padding-top: 25px;
 }
 li:first-letter {
@@ -34,18 +34,34 @@ li:first-letter {
   line-height: normal;
   padding: 25px 0px 0px;
 }
-.temperature-day {
+.current-day {
   font-family: "Reem Kufi", sans-serif;
   font-size: 50px;
   line-height: 50px;
   padding-right: 5px;
 }
-.temperature-information {
-  text-align: left;
-}
-.temperature-unit {
+.current-day-unit {
+  font-family: "Reem Kufi", sans-serif;
   position: relative;
   top: -20px;
+}
+.current-day-information {
+  text-align: left;
+  line-height: 24px;
+}
+.current-day-text {
+  font-size: 17px;
+  padding-right: 5px;
+}
+.current-day-temperature {
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 24px;
+  padding-right: 5px;
+}
+.current-day-information-unit {
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 17px;
+  vertical-align: super;
 }
 .unit-link {
   text-decoration: none;
