@@ -33,6 +33,7 @@ export default function Search(props) {
   }
   function displayCity(event) {
     event.preventDefault();
+    setCity(event.target.innerHTML);
     searchCity();
   }
   function searchCity() {
@@ -72,10 +73,7 @@ export default function Search(props) {
                     href="/"
                     key={index}
                     className="city-link"
-                    onClick={(event) => {
-                      setCity(event.target.innerHTML);
-                      displayCity(event);
-                    }}
+                    onClick={displayCity}
                   >
                     {cityName}
                   </a>
