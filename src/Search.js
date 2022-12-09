@@ -6,19 +6,13 @@ import "./Search.css";
 import axios from "axios";
 
 export default function Search(props) {
-  const [weather, setWeather] = useState({ loaded: false });
+  const [weather, setWeather] = useState();
   const [city, setCity] = useState(props.cityName);
-  let cityNames = [
-    { id: 1, name: "London" },
-    { id: 2, name: "Paris" },
-    { id: 3, name: "Rome" },
-    { id: 4, name: "Berlin" },
-    { id: 5, name: "Kyiv" },
-  ];
+  let [loaded, setLoaded] = useState(false);
+  let cityNames = ["London", "Paris", "Rome", "Oslo", "Kyiv"];
 
   function showWeather(response) {
     setWeather({
-      ready: true,
       date: new Date(response.data.time * 1000),
       temperature: response.data.temperature.current.toFixed(0),
       feels: response.data.temperature.feels_like.toFixed(0),
@@ -28,6 +22,7 @@ export default function Search(props) {
       icon: response.data.condition.icon,
       city: response.data.city,
     });
+    setLoaded(true);
   }
   function submitCity(event) {
     event.preventDefault();
@@ -36,9 +31,8 @@ export default function Search(props) {
   function updateCity(event) {
     setCity(event.target.value);
   }
-  function showCity(event) {
+  function displayCity(event) {
     event.preventDefault();
-    setCity("London");
     searchCity();
   }
   function searchCity() {
@@ -65,32 +59,31 @@ export default function Search(props) {
     </form>
   );
 
-  let cities = (
-    <div className="cities">
-      <div className="row">
-        {cityNames.map(function (city) {
-          return (
-            <div className="col">
-              <a
-                href="/"
-                key={city.id}
-                className="city-link"
-                onClick={showCity}
-              >
-                {city.name}
-              </a>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-
-  if (weather.ready) {
+  if (loaded) {
     return (
       <div className="Content">
         {form}
-        {cities}
+        <div className="cities">
+          <div className="row">
+            {cityNames.map(function (cityName, index) {
+              return (
+                <div className="col">
+                  <a
+                    href="/"
+                    key={index}
+                    className="city-link"
+                    onClick={(event) => {
+                      setCity(event.target.innerHTML);
+                      displayCity(event);
+                    }}
+                  >
+                    {cityName}
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+        </div>
         <hr />
         <Information weather={weather} />
         <hr />
