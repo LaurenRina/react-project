@@ -10,7 +10,7 @@ export default function App() {
         <footer>
           <i className="fa-brands fa-github contact-icon"></i>LaurenRina{" "}
           <a
-            href="https://github.com/LaurenRina/weather-react"
+            href="https://github.com/LaurenRina/react-project"
             target="blank"
             className="contact-link"
             title="GitHub"
