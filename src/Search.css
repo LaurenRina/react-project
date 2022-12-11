@@ -40,6 +40,9 @@
   font-size: 18px;
   padding-top: 15px;
 }
+.city {
+  padding: 0px;
+}
 .city-link {
   color: #000000;
   text-decoration: none;
@@ -47,4 +50,13 @@
 }
 .city-link:hover {
   color: #000000;
+}
+@media screen and (max-width: 768px) {
+  .search-line {
+    margin-right: 10px;
+  }
+  .cities {
+    padding: 15px 20px 0px;
+    font-size: 16px;
+  }
 }

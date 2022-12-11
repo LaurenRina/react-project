@@ -43,7 +43,7 @@ export default function Search(props) {
   }
   let form = (
     <form onSubmit={submitCity} className="search">
-      <div className="row">
+      <div className="row search-line">
         <div className="col-9">
           <input
             type="search"
@@ -68,7 +68,7 @@ export default function Search(props) {
           <div className="row">
             {cityNames.map(function (cityName, index) {
               return (
-                <div className="col">
+                <div className="col city">
                   <a
                     href="/"
                     key={index}

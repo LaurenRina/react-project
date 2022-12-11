@@ -71,3 +71,42 @@ li:first-letter {
   color: #000000;
   text-decoration: underline;
 }
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  ul {
+    font-size: 16px;
+    padding: 25px 0px 0px;
+  }
+  .information {
+    padding: 20px 0px 0px;
+  }
+  .current-weather {
+    padding: 10px 0px;
+  }
+  .current-weather-icon {
+    padding: 25px 10px 0px;
+  }
+  .current-day {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .current-day-unit {
+    position: relative;
+    top: -15px;
+  }
+  .current-day-text {
+    font-size: 16px;
+  }
+  .current-day-temperature {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .current-day-information-unit {
+    font-size: 15px;
+  }
+}
