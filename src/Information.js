@@ -10,7 +10,7 @@ export default function Information(props) {
         <div className="col-7">
           <h1>{props.weather.city}</h1>
         </div>
-        <div className="col-5">
+        <div className="col-5 date">
           <h2>
             <FormattedDate date={props.weather.date} />
           </h2>

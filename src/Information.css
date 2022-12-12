@@ -85,6 +85,9 @@ li:first-letter {
   .information {
     padding: 20px 0px 0px;
   }
+  .date {
+    padding-left: 0px;
+  }
   .current-weather {
     padding: 10px 0px;
   }

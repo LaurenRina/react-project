@@ -37,7 +37,12 @@ export default function FormattedDate(props) {
   let date = props.date.getDate();
   return (
     <div>
-      {day} {hours}:{min} {month} {date}
+      <div>
+        {day} {hours}:{min}
+      </div>
+      <div>
+        {month} {date}
+      </div>
     </div>
   );
 }
